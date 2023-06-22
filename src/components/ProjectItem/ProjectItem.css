@@ -1,0 +1,98 @@
+.project-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0px -100px;
+    padding: 7em 20em;
+}
+
+.projectItem-image-card {
+    width: 350px;
+    height: 230px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px #00000060;
+}
+
+.projectItem-card {
+    width: 350px;
+    height: 230px;
+    border: solid 2px #474747;
+    border-radius: 30px;
+    filter: grayscale(60%);
+}
+
+.projectItem-card:hover {
+    filter: grayscale(0%);
+    transition: .5s;
+    cursor: pointer;
+    border: solid 2px #3CFFC8;
+}
+
+.projectItem-card:focus {
+    filter: grayscale(0%);
+    transition: .5s;
+    border: solid 2px #3CFFC8;
+    outline: 0;
+}
+
+.project-description-container {
+    margin-left: 50px;
+}
+
+.project-description {
+    width: 450px;
+    margin: 20px 0px;
+    text-align: justify;
+}
+
+.project-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.projects-action-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Phone Screens */
+@media (max-width: 1300px) {
+    .project-item {
+        flex-direction: column;
+        padding: 80px 0px 0px 0px;
+        margin: 0px;
+    }
+
+    .projectItem-image-card {
+        width: 280px;
+        height: 180px;
+        border-radius: 30px;
+        box-shadow: 0px 0px 20px #00000060;
+    }
+
+    .projectItem-card {
+        width: 280px;
+        height: 180px;
+    }
+
+    .project-description-container {
+        margin: 0px;
+        padding: 0px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .project-description-container h3 {
+        margin: 30px 0px 0px;
+    }
+
+    .project-description {
+        width: 280px;
+        margin: 20px 2px;
+        text-align: justify;
+    }
+}

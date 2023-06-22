@@ -1,0 +1,16 @@
+.projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 100px;
+    margin-bottom: 80px;
+}
+
+/* Phone Screens */
+@media (max-width: 1300px) {
+    .projects {
+        padding: 0px;
+    }
+}

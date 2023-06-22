@@ -1,0 +1,136 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 150px 0px 80px;
+}
+
+.contact-text {
+    width: 100%;
+    margin: 0px 40px;
+    text-align: center;
+    font-size: .9rem;
+}
+
+.contact-email-image {
+    width: 230px;
+    height: 230px;
+}
+
+.contact-content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.contact-left-container,
+.contact-right-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 380px;
+    margin: 100px 0px 70px;
+}
+
+.contact-left-container {
+    width: 25vw;
+}
+
+.contact-right-container {
+    width: 25vw;
+    justify-content: center;
+}
+
+.contact-input-small {
+    width: 280px;
+    margin: 10px 0px;
+    padding: 10px 10px 7px;
+    border: solid 1px #929292;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #00000030;
+    font-size: .9em;
+    background-color: transparent;
+    color: #FBFCFF;
+}
+
+.contact-input-small:focus {
+    border: solid 1px #3CFFC8;
+    outline: 0;
+    transition: .3s;
+}
+
+.contact-input-large {
+    width: 280px;
+    height: 100px;
+    margin: 10px 0px 25px;
+    padding: 10px;
+    border: solid 1px #929292;
+    border-radius: 10px; 
+    box-shadow: 0px 0px 10px #00000030;
+    resize: none;
+    font-size: .9rem;
+    background-color: transparent;
+    color: #FBFCFF
+}
+
+.contact-input-large:focus {
+    border: solid 1px #3CFFC8;
+    outline: 0;
+    transition: .3s;
+}
+
+.contact-button-shadow {
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #00000055;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Small Screens /*/
+@media (max-width: 1500px) {
+    .contact {
+        padding-top: 70px;
+    }
+
+    .contact-left-container,
+    .contact-right-container {
+        margin-top: 80px;
+    }
+}
+
+/* Phone Screens */
+@media (max-width: 1300px) { 
+    .contact,
+    .contact-content-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0px;
+    }
+
+    .contact {
+        margin-top: 50px;
+    }
+
+    .contact-left-container,
+    .contact-right-container {
+        width: 100%;
+        margin: 0px;
+    }
+
+    .contact-right-container {
+        height: fit-content;
+        margin: 50px;
+    }
+
+}

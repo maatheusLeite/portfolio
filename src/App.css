@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+    scroll-behavior: smooth;
+}
+
+*::selection,
+*::-moz-selection { 
+    color: #050505;
+    -webkit-text-fill-color: #050505;
+    background: #3CFFC8;    
+}
+
+body {
+    background-color: #050505;
+    color: #FBFCFF;
+    font-size: 1.1em;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;             
+}
+
+body::-webkit-scrollbar-track {
+    background: #111;       
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #0B7A5B;   
+    border-radius: 20px;      
+    border: 3px solid #3CFFC8;  
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0vh 14vw;
+}
+
+.hidden-content {
+    color: #1A1A1A;
+}
+
+.main-title {
+    font-size: 2.6rem;
+    font-weight: 800;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.title-dark { 
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #050505;
+}
+
+.title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    justify-self: flex-start;
+}
+
+.main-subtitle {
+    font-size: 1.8rem;
+    font-weight: 300;
+    font-family: Cambria;
+    margin-top: 2px;
+}
+
+.subtitle-dark {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #050505;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.highlight {
+    background: -webkit-linear-gradient(bottom right, #6AFFD5, #3CFFC8);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.intersection-1 {
+    height: 100px;
+    width: 100vw;
+    margin: 250px 0px 100px;
+}
+
+.intersection-2 {
+    height: 100px;
+    width: 100vw;
+    margin: 120px 0px 100px;
+}
+
+.intersection-3 {
+    height: 100px;
+    width: 100vw;
+    margin: 120px 0px 0px;
+}
+
+.intersection-4 {
+    height: 100px;
+    width: 100vw;
+}
+
+.margin-10 {
+    margin: 10px 0px;
+}
+
+.margin-20 {
+    margin: 20px 0px;
+}
+
+.white {
+    color: #FBFCFF;
+}
+
+/* Small Screens */
+@media (max-width: 1500px) { 
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+    
+    body {
+        font-size: 0.9em;
+    }
+}
+
+/* Phone Screens */
+@media (max-width: 1300px) { 
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    body {
+        font-size: 0.9em;
+    }
+
+    .hide {
+        display: none;  
+    }
+
+    .main-container {
+        padding: 0vh 2vw;
+    }
+
+    .main-title-card {
+        padding-top: 0px;
+    }
+
+    .title {
+        font-size: 1.3rem;
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+    }
+
+    .intersection-1 {
+        margin-top: 300px;
+    }
+}

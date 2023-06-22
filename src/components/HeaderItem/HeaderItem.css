@@ -1,0 +1,110 @@
+svg {
+    fill: transparent;
+    margin-top: 10px;
+    stroke: 10;
+    stroke: #3CFFC8;
+    width: 40px;
+    height: 40px;
+}
+
+.home,
+.github,
+.linkedin {
+    margin: 0px 25px;
+    outline: 0;
+}
+
+.home path {
+    stroke-dasharray: 1510;
+    stroke-dashoffset: 0;
+}
+
+.home:focus path,
+.home:hover path {
+    animation: animate-home .6s linear forwards;
+    outline: 0;
+}
+
+.github path {
+    stroke-dasharray: 190;
+    stroke-dashoffset: 0;
+}
+
+.github:focus path,
+.github:hover path {
+    animation: animate-github .6s linear forwards;
+    outline: 0;
+}
+
+.linkedin path {
+    stroke-dasharray: 1800;
+    stroke-dashoffset: 0;
+}
+
+.linkedin:focus path,
+.linkedin:hover path {
+    animation: animate-linkedin .6s linear forwards;
+    outline: 0;
+}
+
+@keyframes animate-home {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    40%{
+        stroke-dashoffset: 1510;
+    }
+    80%{
+        stroke-dashoffset: 3020;
+        fill: transparent;
+    }
+    100%{
+        stroke-dashoffset: 3020;
+        fill: #3CFFC8;
+    }
+}
+
+@keyframes animate-linkedin {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    40%{
+        stroke-dashoffset: 1800;
+    }
+    80%{
+        stroke-dashoffset: 3600;
+        fill: transparent;
+    }
+    100%{
+        stroke-dashoffset: 3600;
+        fill: #3CFFC8;
+    }
+}
+
+@keyframes animate-github {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    40%{
+        stroke-dashoffset: 190;
+    }
+    80%{
+        stroke-dashoffset: 380;
+        fill: transparent;
+    }
+    100%{
+        stroke-dashoffset: 380;
+        fill: #3CFFC8;
+    }
+}
+
+/* Phone Screens */
+@media (max-width: 1300px) {
+    svg {
+        margin: 0px;
+    }
+
+    .github svg {
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,31 @@
+.social-media-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 200px;
+}
+
+.social-media-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 300px;
+}
+
+.social-media-text {
+    font-size: .9rem;
+    padding: 0px 0px 5px;
+    margin-left: -25px;
+}
+
+.social-media-text-1 {
+    font-size: .9rem;
+    padding: 0px 0px 5px;
+    margin-left: 2px;
+}
+
+.social-media-svg {
+    padding-left: 48px;
+}

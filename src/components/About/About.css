@@ -1,0 +1,186 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 100px;
+}
+
+.about-content-container,
+.about-content-1,
+.about-content-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.about-content-1 {
+    align-items: flex-start;
+    margin: 90px 0px 40px;
+    padding: 0px 180px;
+    width: 72%;
+    max-width: 840px;
+}
+
+.about-content-2 {
+    align-items: center;
+}
+
+.about-content-container {
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+.about-image-card {
+    width: 80%;
+    height: 80%;
+    border-radius: 10px;
+    box-shadow: -3px 3px 10px #00000060;
+    margin: 0px 80px 0px 0px;
+}
+
+.about-text-1 {
+    margin: -22px 0px 20px;
+    line-height: 30px; 
+}
+
+.about-text-2 {
+    line-height: 22px; 
+    align-self: center;
+    margin-top: 5px;
+    width: 310px;
+    text-align: justify;
+    font-size: 1.03rem;
+}
+
+.about-text-line {
+    margin: 15px 0px;
+}
+
+.about-subtitle-img {
+    width: 52px;
+    height: 52px;
+    margin-right: 20px;
+}
+
+.about-education-card,
+.about-carrer-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: flex-start;
+    width: 400px;
+    margin: -10px 20px;
+}
+
+/* Small Screens */
+@media  (max-width: 1500px) {
+    .about {
+        padding-top: 70px
+    }
+
+    .about-content-container,
+    .about-content-1 {
+        padding: 0px;
+    }
+
+    .about-content-1 {
+        margin-top: 70px;
+        margin-bottom: 35px;
+    }
+
+    .about-text-1 p {
+        font-size: .9rem;
+        width: 600px;
+    }
+
+    .about-text-2 p {
+        font-size: .9rem;
+        width: 300px;
+    }
+
+    .about-text-1,
+    .about-text-2 {
+        width: fit-content;
+    }
+
+    .about-image-card {
+        width: 220px;
+        height: 220px;
+        margin-right: 50px;
+    }
+
+    .subtitle {
+        margin: 0px;
+        font-size: 1.1rem;
+    }
+}
+
+/* Phone Screens */
+@media (max-width: 1300px) { 
+    .about {
+        padding: 0px;
+        justify-content: center;
+    }
+
+    .about-content-1 {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 50px 0px 20px;
+        padding: 0px;
+        width: 100%;
+    }
+
+    .about-content-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+    }
+
+    .about-image-card {
+        width: 200px;
+        height: 200px;
+        margin: 0px;
+    }
+    
+    .about-text-1 p {
+        width: 325px;
+        align-items: center;
+        margin: 20px 0px -10px;
+        text-align: center;
+    }
+
+    .about-text-2 p {
+        width: 280px;
+    }
+
+    .about-subtitle-img {
+        width: 35px;
+        height: 35px;
+        margin-right: 10px;
+    }
+
+    .about-education-card,
+    .about-carrer-card {
+        margin: 0px;
+        padding: 0px;
+        align-self: center;
+        align-items: center;
+    }
+
+    .about-content-2 {
+        margin: 10px 0px;
+        width: 330px;
+    }
+
+    .subtitle {
+        margin: 30px 10px 0px;
+    }
+}

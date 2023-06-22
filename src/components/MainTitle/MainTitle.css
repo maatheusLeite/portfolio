@@ -1,0 +1,19 @@
+.main-title-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 35vh;
+}
+
+.main-title {
+    font-size: 3rem;
+    width: 100vw;
+    text-align: center;
+    align-self: center;
+}
+
+.main-subtitle {
+    font-size: 2rem;
+    margin-top: 2px;
+}
+
