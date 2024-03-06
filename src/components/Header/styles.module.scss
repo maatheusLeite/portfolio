@@ -1,0 +1,132 @@
+@import '../../../styles/colors.module.scss';
+
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    background-color: $translucentDark;
+    padding: 10px 0px;
+}
+
+.homeImg {
+    width: 50px;
+    height: 50px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.svg {
+    width: 40px;
+    height: 40px;
+    margin: 0px 25px;
+    stroke: 10;
+    stroke: $primary;
+    outline: 0;
+    fill: transparent;
+}
+
+.homeSvg {
+    @extend .svg;
+
+    path {
+        stroke-dasharray: 1510;
+        stroke-dashoffset: 0;
+    }
+
+    &:focus path,
+    &:hover path {
+        animation: animate-home .6s linear forwards;
+        outline: 0;
+    }
+}
+
+.githubSvg {
+    @extend .svg;
+
+    path {
+        stroke-dasharray: 190;
+        stroke-dashoffset: 0;
+    }
+
+    &:focus path,
+    &:hover path {
+        animation: animate-github .6s linear forwards;
+        outline: 0;
+    }
+}
+
+.linkedinSvg {
+    @extend .svg;
+
+    path {
+        stroke-dasharray: 1800;
+        stroke-dashoffset: 0;
+    }
+
+    &:focus path,
+    &:hover path {
+        animation: animate-linkedin .6s linear forwards;
+        outline: 0;
+    }
+}
+
+@keyframes animate-home {
+    0% {
+        stroke-dashoffset: 0;
+    }
+
+    40% {
+        stroke-dashoffset: 1510;
+    }
+
+    80% {
+        stroke-dashoffset: 3020;
+        fill: transparent;
+    }
+
+    100% {
+        stroke-dashoffset: 3020;
+        fill: $primary;
+    }
+}
+
+@keyframes animate-linkedin {
+    0% {
+        stroke-dashoffset: 0;
+    }
+
+    40% {
+        stroke-dashoffset: 1800;
+    }
+
+    80% {
+        stroke-dashoffset: 3600;
+        fill: transparent;
+    }
+
+    100% {
+        stroke-dashoffset: 3600;
+        fill: $primary;
+    }
+}
+
+@keyframes animate-github {
+    0% {
+        stroke-dashoffset: 0;
+    }
+
+    40% {
+        stroke-dashoffset: 190;
+    }
+
+    80% {
+        stroke-dashoffset: 380;
+        fill: transparent;
+    }
+
+    100% {
+        stroke-dashoffset: 380;
+        fill: $primary;
+    }
+}

@@ -1,0 +1,30 @@
+@import '../styles/colors.module.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    background-color: $dark;
+    min-height: 100vh;
+    color: $light;
+
+    p {
+        margin: 0;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: $gray;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $tertiary;
+    border-radius: 40px;
+}
