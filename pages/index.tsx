@@ -4,10 +4,12 @@ import '../node_modules/aos/dist/aos.css'
 
 import { useEffect } from 'react'
 import Header from '../src/components/Header'
+import Footer from '../src/components/Footer'
 
 import Head from "next/head"
 import AOS from "aos"
 import styles from '../styles/home.module.scss'
+import { Container } from 'reactstrap'
 
 export default function Home() {
   useEffect(() => {
@@ -26,9 +28,11 @@ export default function Home() {
         />
       </Head>
 
-      <main>
+      <main className={styles.main}>
         <Header />
-        
+        <Container className={styles.homeContainer}>
+        </Container>
+        <Footer />
       </main>
     </>
   )

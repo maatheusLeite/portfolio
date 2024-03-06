@@ -5,13 +5,8 @@ export default function Header() {
     return (
         <>
             <div className={styles.header}>
-                <Container
-                    className={styles.headerContainer}
-                >
-                    <a
-                        href="#"
-                        className={styles.homeSvg}
-                    >
+                <Container className={styles.headerContainer} >
+                    <a href="#" className={styles.homeSvg} >
                         <svg
                             width='50px'
                             height='50px'
@@ -84,7 +79,6 @@ export default function Header() {
                             </svg>
                         </a>
                     </div>
-
                 </Container>
             </div>
         </>
