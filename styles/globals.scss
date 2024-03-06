@@ -1,9 +1,28 @@
 @import '../styles/colors.module.scss';
 
+@font-face {
+    font-family: quicksand;
+    src: url('../public/assets/fonts/Quicksand/Quicksand-Light.ttf');
+}
+
+@font-face {
+    font-family: quicksandMedium;
+    src: url('../public/assets/fonts/Quicksand/Quicksand-Medium.ttf');
+}
+
+@font-face {
+    font-family: cinzel;
+    src: url('../public/assets/fonts/Cinzel/Cinzel-Regular.ttf');
+}
+
+@font-face {
+    font-family: cinzelMedium;
+    src: url('../public/assets/fonts/Cinzel/Cinzel-Medium.ttf');
+}
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 main {

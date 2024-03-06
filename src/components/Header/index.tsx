@@ -2,11 +2,6 @@ import { Container } from 'reactstrap'
 import styles from './styles.module.scss'
 
 export default function Header() {
-    // function goToFirstSection() {
-    //     document.body.scrollTop = 0
-    //     document.documentElement.scrollTop = 0
-    // }
-
     return (
         <>
             <div className={styles.header}>
@@ -38,6 +33,12 @@ export default function Header() {
                             </g>
                         </svg>
                     </a>
+
+                    <nav className={styles.navbar}>
+                        <a href='#projects' className={styles.navbarItem}> PROJETOS </a>
+                        <a href='#skills' className={styles.navbarItem}> HABILIDADES </a>
+                        <a href='#contact' className={styles.navbarItem}> CONTATO </a>
+                    </nav>
 
                     <div className='d-flex gap-5'>
                         <a
