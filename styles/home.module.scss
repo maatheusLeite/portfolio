@@ -1,3 +1,5 @@
+@import '../styles/colors.module.scss';
+
 .main {
     display: flex;
     flex-direction: column;
@@ -5,4 +7,34 @@
 
 .homeContainer {
     flex: 1 0 auto;
+}
+
+.darkTheme {
+    background-color: $dark;
+    color: $white;
+    transition: .3s;
+}
+
+.lightTheme {
+    background-color: $light;
+    color: $black;
+    transition: .3s;
+}
+
+.footerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: quicksand;
+    font-weight: bolder;
+    padding: 5px 0px;
+    gap: 40px;
+}
+
+.footerSwitchButton {
+    background-color: $secondary;
+}
+
+.footerDomain {
+    letter-spacing: 2px;
 }

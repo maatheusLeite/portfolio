@@ -1,7 +1,7 @@
 @import '../../../styles/colors.module.scss';
 
 .headerContainer {
-    background-color: $translucentDark;
+    background-color: $translucentBackgorund;
     padding: 15px 0px;
     display: flex;
     justify-content: space-between;
@@ -17,11 +17,10 @@
 .navbarItem {
     position: relative;
     text-decoration: none;
-    color: $primary;
     cursor: pointer;
     transition: .3s;
-    padding: 10px 20px;
-    font-family: cinzel;
+    padding: 5px 10px;
+    font-family: cinzelMedium;
     font-size: 18px;
     letter-spacing: 2px;
 
@@ -53,11 +52,19 @@
     }
 }
 
+.navbarItemLight {
+    @extend .navbarItem;
+    color: $dark;
+}
+
+.navbarItemDark {
+    @extend .navbarItem;
+    color: $light;
+}
 
 .svg {
     margin: 0px 25px;
     stroke: 10;
-    stroke: $primary;
     outline: 0;
     fill: transparent;
 }
@@ -69,10 +76,28 @@
         stroke-dasharray: 1510;
         stroke-dashoffset: 0;
     }
+}
+
+.homeSvgLight {
+    @extend .homeSvg;
+
+    stroke: $dark;
 
     &:focus path,
     &:hover path {
-        animation: animate-home .6s linear forwards;
+        animation: animateHomeLight .6s linear forwards;
+        outline: 0;
+    }
+}
+
+.homeSvgDark {
+    @extend .homeSvg;
+
+    stroke: $light;
+
+    &:focus path,
+    &:hover path {
+        animation: animateHomeDark .6s linear forwards;
         outline: 0;
     }
 }
@@ -84,10 +109,28 @@
         stroke-dasharray: 190;
         stroke-dashoffset: 0;
     }
+}
+
+.githubSvgLight {
+    @extend .githubSvg;
+
+    stroke: $dark;
 
     &:focus path,
     &:hover path {
-        animation: animate-github .6s linear forwards;
+        animation: animateGithubLight .6s linear forwards;
+        outline: 0;
+    }
+}
+
+.githubSvgDark {
+    @extend .githubSvg;
+
+    stroke: $light;
+
+    &:focus path,
+    &:hover path {
+        animation: animateGithubDark .6s linear forwards;
         outline: 0;
     }
 }
@@ -99,15 +142,31 @@
         stroke-dasharray: 1800;
         stroke-dashoffset: 0;
     }
+}
+
+.linkedinSvgLight {
+    @extend .linkedinSvg;
+    stroke: $dark;
 
     &:focus path,
     &:hover path {
-        animation: animate-linkedin .6s linear forwards;
+        animation: animateLinkedinLight .6s linear forwards;
         outline: 0;
     }
 }
 
-@keyframes animate-home {
+.linkedinSvgDark {
+    @extend .linkedinSvg;
+    stroke: $light;
+
+    &:focus path,
+    &:hover path {
+        animation: animateLinkedinDark .6s linear forwards;
+        outline: 0;
+    }
+}
+
+@keyframes animateHomeLight {
     0% {
         stroke-dashoffset: 0;
     }
@@ -123,31 +182,31 @@
 
     100% {
         stroke-dashoffset: 3020;
-        fill: $primary;
+        fill: $dark;
     }
 }
 
-@keyframes animate-linkedin {
+@keyframes animateHomeDark {
     0% {
         stroke-dashoffset: 0;
     }
 
     40% {
-        stroke-dashoffset: 1800;
+        stroke-dashoffset: 1510;
     }
 
     80% {
-        stroke-dashoffset: 3600;
+        stroke-dashoffset: 3020;
         fill: transparent;
     }
 
     100% {
-        stroke-dashoffset: 3600;
-        fill: $primary;
+        stroke-dashoffset: 3020;
+        fill: $light;
     }
 }
 
-@keyframes animate-github {
+@keyframes animateGithubLight {
     0% {
         stroke-dashoffset: 0;
     }
@@ -163,6 +222,66 @@
 
     100% {
         stroke-dashoffset: 380;
-        fill: $primary;
+        fill: $dark;
+    }
+}
+
+@keyframes animateGithubDark {
+    0% {
+        stroke-dashoffset: 0;
+    }
+
+    40% {
+        stroke-dashoffset: 190;
+    }
+
+    80% {
+        stroke-dashoffset: 380;
+        fill: transparent;
+    }
+
+    100% {
+        stroke-dashoffset: 380;
+        fill: $light;
+    }
+}
+
+@keyframes animateLinkedinLight {
+    0% {
+        stroke-dashoffset: 0;
+    }
+
+    40% {
+        stroke-dashoffset: 1800;
+    }
+
+    80% {
+        stroke-dashoffset: 3600;
+        fill: transparent;
+    }
+
+    100% {
+        stroke-dashoffset: 3600;
+        fill: $dark;
+    }
+}
+
+@keyframes animateLinkedinDark{
+    0% {
+        stroke-dashoffset: 0;
+    }
+
+    40% {
+        stroke-dashoffset: 1800;
+    }
+
+    80% {
+        stroke-dashoffset: 3600;
+        fill: transparent;
+    }
+
+    100% {
+        stroke-dashoffset: 3600;
+        fill: $light;
     }
 }

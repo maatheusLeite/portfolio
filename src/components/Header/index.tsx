@@ -1,12 +1,52 @@
 import { Container } from 'reactstrap'
 import styles from './styles.module.scss'
 
-export default function Header() {
+interface props {
+    isLightTheme: boolean
+}
+
+export default function Header({ isLightTheme }: props) {
+    function handleNavItemSwitchTheme() {
+        if (isLightTheme) {
+            return styles.navbarItemLight
+        }
+        else {
+            return styles.navbarItemDark
+        }
+    }
+
+    function handleHomeSvgSwitchTheme() {
+        if (isLightTheme) {
+            return styles.homeSvgLight
+        }
+        else {
+            return styles.homeSvgDark
+        }
+    }
+
+    function handleGithubSvgSwitchTheme() {
+        if (isLightTheme) {
+            return styles.githubSvgLight
+        }
+        else {
+            return styles.githubSvgDark
+        }
+    }
+
+    function handleLinkedinSvgSwitchTheme() {
+        if (isLightTheme) {
+            return styles.linkedinSvgLight
+        }
+        else {
+            return styles.linkedinSvgDark
+        }
+    }
+
     return (
         <>
             <div className={styles.header}>
                 <Container className={styles.headerContainer} >
-                    <a href="#" className={styles.homeSvg} >
+                    <a href="#" className={handleHomeSvgSwitchTheme()} >
                         <svg
                             width='50px'
                             height='50px'
@@ -30,16 +70,16 @@ export default function Header() {
                     </a>
 
                     <nav className={styles.navbar}>
-                        <a href='#projects' className={styles.navbarItem}> PROJETOS </a>
-                        <a href='#skills' className={styles.navbarItem}> HABILIDADES </a>
-                        <a href='#contact' className={styles.navbarItem}> CONTATO </a>
+                        <a href='#projects' className={handleNavItemSwitchTheme()}> PROJETOS </a>
+                        <a href='#skills' className={handleNavItemSwitchTheme()}> HABILIDADES </a>
+                        <a href='#contact' className={handleNavItemSwitchTheme()}> CONTATO </a>
                     </nav>
 
                     <div className='d-flex gap-5'>
                         <a
                             href="https://github.com/maatheusLeite"
                             target='_blank'
-                            className={styles.githubSvg}
+                            className={handleGithubSvgSwitchTheme()}
                         >
                             <svg
                                 width='50px'
@@ -62,7 +102,7 @@ export default function Header() {
                         <a
                             href="https://linkedin.com/in/matheuslt/"
                             target='_blank'
-                            className={styles.linkedinSvg}
+                            className={handleLinkedinSvgSwitchTheme()}
                         >
                             <svg
                                 width='50px'
