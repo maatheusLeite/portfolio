@@ -1,0 +1,18 @@
+.outsideContainer {
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 1320px;
+    max-width: 1320px;
+    height: 100vh;
+    padding: 0px 10px;
+}
+
+.photo {
+    width: 500px;
+    height: 500px;
+    border-radius: 30px;
+}

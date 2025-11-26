@@ -1,0 +1,17 @@
+:root {
+  --color-bg: #e8ecf2;
+  --color-text: #0d0d0d;
+  --color-primary: #455dc3;
+  --color-secondary: #b0fbe6;
+  --color-switch-bg: #0d0d0d;
+  --color-switch-circle: #e8ecf2;
+}
+
+[data-theme="dark"] {
+  --color-bg: #0d0d0d;
+  --color-text: #fbfcff;
+  --color-primary: #b0fbe6;
+  --color-secondary: #455dc3;
+  --color-switch-bg: #e8ecf2;
+  --color-switch-circle: #6b6b6b;
+}

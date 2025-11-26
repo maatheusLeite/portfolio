@@ -1,0 +1,55 @@
+.formSwitch {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+
+    input[type="checkbox"] {
+        width: 36px;
+        height: 18px;
+        appearance: none;
+        -webkit-appearance: none;
+        background-color: var(--color-switch-bg);
+        border-radius: 50px;
+        position: relative;
+        outline: none;
+        cursor: pointer;
+        transition:
+            background-color .18s ease-in-out,
+            border-color .18s ease-in-out;
+
+        // Circle
+        &::before {
+            content: "";
+            position: absolute;
+            height: 12px;
+            width: 12px;
+            right: 3px;
+            top: 3px;
+            background-color: var(--color-switch-circle);
+            border-radius: 50%;
+            transition:
+                transform .18s ease-in-out,
+                background-color .18s ease-in-out;
+            box-shadow:
+                0 0 0 1px #0000001a,
+                0 2px 4px #0000001a;
+        }
+
+        &:checked {
+            background-color: var(--color-switch-bg);
+
+            // Checked Circle
+            &::before {
+                transform: translateX(-18px);
+                background-color: var(--color-switch-circle);
+            }
+        }
+    }
+
+    .label {
+        font-size: 16px;
+        font-weight: 500;
+    }
+}

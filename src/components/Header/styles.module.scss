@@ -1,0 +1,162 @@
+.headerContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    padding: 10px 3px;
+    font-weight: 500;
+}
+
+.socialMediaContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+.navbarItem {
+    position: relative;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-family: var(--font-cinzel), serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--color-text);
+    letter-spacing: 2px;
+    text-decoration: none;
+    transition: color .3s ease;
+
+    &:focus,
+    &:hover,
+    &:active {
+        color: var(--color-primary);
+        stroke: var(--color-primary);
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+
+        width: 0;
+        height: 1px;
+        background: var(--color-primary);
+        transition: width .3s ease, left .3s ease;
+    }
+
+    &:hover::after,
+    &:focus::after {
+        width: 100%;
+        left: 0;
+    }
+}
+
+.headerHomeButton path {
+    stroke-dasharray: 1510;
+    stroke-dashoffset: 0;
+}
+
+.headerHomeButton:focus path,
+.headerHomeButton:hover path,
+.headerHomeButton:active path {
+    outline: 0;
+    color: var(--color-primary);
+    stroke: var(--color-primary);
+    animation: animate-home .6s linear forwards;
+}
+
+.headerGithubButton path {
+    stroke-dasharray: 190;
+    stroke-dashoffset: 0;
+}
+
+.headerGithubButton:focus path,
+.headerGithubButton:hover path,
+.headerGithubButton:active path {
+    outline: 0;
+    color: var(--color-primary);
+    stroke: var(--color-primary);
+    animation: animate-github .6s linear forwards;
+}
+
+.headerLinkedinButton path {
+    stroke-dasharray: 1800;
+    stroke-dashoffset: 0;
+}
+
+.headerLinkedinButton:focus path,
+.headerLinkedinButton:hover path,
+.headerLinkedinButton:active path {
+    outline: 0;
+    color: var(--color-primary);
+    stroke: var(--color-primary);
+    animation: animate-linkedin .6s linear forwards;
+}
+
+@keyframes animate-home {
+    0% {
+        stroke-dashoffset: 0;
+    }
+
+    40% {
+        stroke-dashoffset: 1510;
+    }
+
+    80% {
+        stroke-dashoffset: 3020;
+        fill: transparent;
+    }
+
+    100% {
+        stroke-dashoffset: 3020;
+        fill: var(--color-primary);
+    }
+}
+
+@keyframes animate-linkedin {
+    0% {
+        stroke-dashoffset: 0;
+    }
+
+    40% {
+        stroke-dashoffset: 1800;
+    }
+
+    80% {
+        stroke-dashoffset: 3600;
+        fill: transparent;
+    }
+
+    100% {
+        stroke-dashoffset: 3600;
+        fill: var(--color-primary);
+    }
+}
+
+@keyframes animate-github {
+    0% {
+        stroke-dashoffset: 0;
+    }
+
+    40% {
+        stroke-dashoffset: 110;
+    }
+
+    80% {
+        stroke-dashoffset: 380;
+        fill: transparent;
+    }
+
+    100% {
+        stroke-dashoffset: 380;
+        fill: var(--color-primary);
+    }
+}

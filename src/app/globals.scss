@@ -1,0 +1,41 @@
+@use "../styles/themes";
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-quicksand), sans-serif;
+
+    background: var(--color-bg);
+    color: var(--color-text);
+}
+
+* {
+    transition:
+        background-color .3s ease-in-out,
+        color .3s ease-in-out,
+        border-color .3s ease-in-out,
+        fill .3s ease-in-out,
+        stroke .3s ease-in-out;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+svg {
+    fill: transparent;
+    margin-top: 5px;
+    stroke: var(--color-text);
+
+    &:hover,
+    &:focus,
+    &.active {
+        stroke: var(--color-primary);
+        color: var(--color-primary);
+    }
+}
+
+.font-cinzel {
+    font-family: var(--font-Cinzel), serif;
+}
